@@ -1,0 +1,18 @@
+{
+  "targets": {
+<<<<<<< HEAD
+    "csa-app-89491": {
+      "hosting": {
+        "CSA-app": [
+          "csa-app-89491"
+=======
+    "csa-project-97ec5": {
+      "hosting": {
+        "CSA-app": [
+          "csa-project-97ec5"
+>>>>>>> 2e3f5f772c68d714cb42471fc5aa726d27ec19dc
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<head>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  </head>
+<form [formGroup]="myForm" (ngSubmit)="onSignup()">
+    <div class="form-group">
+      <p> Password must be at least 6 characters long and match in the 'confirm password' field</p>
+      <label for="email">E-Mail</label>
+      <input formControlName="email" type="email" id="email" #email class="form-control">
+      <span *ngIf="!email.pristine && email.errors != null && email.errors['noEmail']">Invalid email address</span>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input formControlName="password" type="password" id="password" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="confirm-password">Confirm Password</label>
+      <input formControlName="confirmPassword" type="password" id="confirm-password" #confirmPassword class="form-control">
+      <span *ngIf="!confirmPassword.pristine && confirmPassword.errors != null && confirmPassword.errors['passwordsNotMatch']">Passwords do not match</span>
+    </div>
+    <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Sign Up</button>
+  </form>

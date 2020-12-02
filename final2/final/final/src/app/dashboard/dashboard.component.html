@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin">
+      <app-login></app-login>
+      <app-signup></app-signup>
+      <a [routerLink]="'/home'">
+      <input type="image" (click)="login()" src="./assets/images/googleSignIn.png" />
+      
+    </a>
+
+    </form>
+
+    
+
+  </body>
+
+</html>

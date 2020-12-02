@@ -1,0 +1,17 @@
+<h1>View Games</h1>
+<button class="btn" (click)="goBack()">Back</button>
+
+
+<h1>Games</h1>
+
+<div *ngFor="let game of games" class="games-list">
+    <div><strong>Game No: </strong> {{game.gameId}} </div>
+    <div><strong>Court Number: </strong> {{game.courtNo}} </div>
+    <div><strong>Date: </strong> {{game.gameDate | date: "d-MMM-yyyy, h:mm a"}}</div>
+    <div><strong>Venue: </strong> {{game.venue}}</div>
+</div>
+<h2>Delete Game</h2>
+<div class="delete-game">
+    <input type="number" id="gameId" placeholder="Enter Game Number" name="gameId" [(ngModel)]="gameId">
+    <button class="btn" (click)="deleteGame()">Delete Game</button>
+</div>

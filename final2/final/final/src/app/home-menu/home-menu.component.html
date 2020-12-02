@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-md flex-column fixed-top navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+  <div class="collapse navbar-collapse justify-content-md-center w-100" id="navbarNav">
+   <ul class="navbar-nav text-center">
+    <li class="nav-item active">
+     <a class="nav-link" [routerLink]="'/home'">Home <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link" (click)="logout()">Logout</a>
+     <button class="btn" (click)="isAuth"></button>
+    </li>
+   </ul>
+
+  </div>
+ </nav>
+ <div class = "container">
+   <button class="btn-primary button" *ngIf ="isAuth" [routerLink]="'/create'">Create Game</button>
+   <button class="btn-primary button" [routerLink]="'/view'">View Games</button>
+   <button class="btn-primary button" [routerLink]="'/past'">Enter fees for past games</button>
+
+ </div>

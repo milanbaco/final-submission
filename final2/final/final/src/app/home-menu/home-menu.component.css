@@ -1,0 +1,104 @@
+.container{
+    
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+}
+
+.picture{
+    height: auto;
+    width: 100%;
+    display:flex;
+}
+
+.picture:active {
+    transform: scale(0.95,0.95);
+}
+
+.picture:hover {
+    transform: scale(1.05,1.05);
+}
+
+.card{
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-bottom: 0px !important;
+  }
+
+  .logout {
+    display: inline-block;
+    margin-right: 10px;
+    background: #339DFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 38px;
+    border-radius: 50px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 170px;
+    text-align: center;
+    top:0;
+    right:0;
+    position: absolute;
+  }
+
+  .logout:hover {
+    background: #fff;
+    color: #339DFF;
+    box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+  }
+
+
+
+
+
+@media (min-width:320px)  { 
+    
+    .container{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin-top: 70px;
+    }
+
+}
+
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+
+@media (min-width:641px)  {
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+}
+    
+
+}
+
+/*
+ @media (min-width:961px)  { }
+
+@media (min-width:1025px) {  }
+
+@media (min-width:1281px) { }
+*/
+

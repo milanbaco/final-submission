@@ -1,0 +1,27 @@
+
+<h1>Past Games</h1>
+<button class="btn-primary" (click)="goBack()">Back</button>
+
+<div *ngFor="let game of games" class="games-list">
+    <div><strong>Game ID: </strong>{{game.gameId}}</div>
+    <div><strong>Court Number: </strong>{{game.courtNo}}</div>
+    <div><strong>Date: </strong>{{game.gameDate | date: "d-MMM-yyyy, h:mm a"}}</div>
+    <div><strong>Venue: </strong>{{game.venue}}</div>
+    <div *ngIf="game.userId"><strong>Payee: </strong>{{game.userId}}</div>
+    <div *ngIf="game.fee"><strong>Cost: </strong>${{game.fee}}</div>
+</div>
+
+<h2>Update Game</h2>
+<div class="container pad">
+    <form class="inputs" #gameForm="ngForm" (ngSubmit)="updateGame(gameForm.form);">
+
+        <input type="number" id="gameId" placeholder="Game Number" name="gameId" ngModel #gameIdField="ngModel" required>
+
+        <input type="number" id="userId" placeholder="User ID who paid" name="userId" ngModel #userIdField="ngModel" required>
+        
+        <input type="number" id="fee" placeholder="Total Cost" name="fee" ngModel #feeField="ngModel" required>
+
+        <button type="submit" class="submit-button" [disabled]="!gameForm.valid"
+            [ngClass]="{'disabled-btn': !gameForm.valid}">Update Game</button>
+    </form>
+</div>
